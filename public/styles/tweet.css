@@ -7,7 +7,47 @@
     border: solid #000;
     border-radius: 5px;
   }
-
+  
   article.tweet:hover{
     box-shadow: 10px 10px #AEB1CC;
+  }
+  
+  .tweet div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    height: 4em;
+  }
+  
+  .tweet div h3 {
+    display: flex;
+    align-items: center;
+    padding-right: 1em;
+  }
+  
+  .userID {
+    color: #AFAFAF;
+    visibility: hidden;
+  }
+  
+  article.tweet:hover .userID {
+    visibility: visible;
+  }
+  
+  .tweet p {
+    align-self: center;
+    width: 95%;
+    padding: 0.5em;
+    margin: 0em;
+    border-bottom: solid;
+  }
+  
+  .tweet footer {
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+  }
+  
+  .fas {
+    padding-left: 0.5em;
   }
