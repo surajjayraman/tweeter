@@ -8,10 +8,10 @@
     border-radius: 5px;
   }
   
-  article.tweet:hover{
-    box-shadow: 10px 10px #AEB1CC;
+  article.tweet:hover {
+    box-shadow: 10px 10px #AEB1CC;       
   }
-  
+   
   .tweet div {
     display: flex;
     justify-content: space-between;
@@ -49,5 +49,16 @@
   }
   
   .fas {
-    padding-left: 0.5em;
+    padding-left: 0.5em;   
+    color: #4056A1; 
+  }
+
+  .fa-flag:hover {
+    color: orange;
+  }
+  .fa-retweet:hover {
+    color: orange;
+  }
+  .fa-heart:hover {
+    color: orange;
   }
