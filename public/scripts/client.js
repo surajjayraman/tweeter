@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   // new tweet HTML with data filled
   createTweetElement = function(tweetObj) {
-    //const time = createTimeAgo(tweetObj.created_at);
+    const time = timeago.format(tweetObj.created_at);
     const $tweet = $(`        
             <article class="tweet">
             <header>
@@ -32,7 +32,7 @@ $(document).ready(function() {
             </header>
             <p>${tweetObj.content.text}</p>
             <footer>
-            <div>${tweetObj.created_at}</div>
+            <div>${time}</div>
             <div class="icons"><i class="fas fa-flag"></i>  <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div>
             </footer>
             </article>`);
@@ -40,7 +40,6 @@ $(document).ready(function() {
   };
       
   const $tweet = createTweetElement(tweetData);
-  console.log($tweet); // to see what it looks like
   $('#tweets-container').append($tweet);
 
 });
