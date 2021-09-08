@@ -1,0 +1,9 @@
+/* tweet style*/
+
+.tweet {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+    border: solid #000;
+    border-radius: 5px;
+  }
