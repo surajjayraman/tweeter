@@ -48,11 +48,13 @@
     height: 3em;
   }
   
+  /* social icons => class attributes */
   .fas {
     padding-left: 0.5em;   
     color: #4056A1; 
   }
 
+  /* Manage hover state for social icons: change colour when user hovers on icon */
   .fa-flag:hover {
     color: orange;
   }
