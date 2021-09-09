@@ -70,6 +70,47 @@ $(document).ready(function() {
             </article>`);
     return $tweet;
   };
+
+  // adding New Tweet
+  // add an event listener that listens for the submit event
+  // prevent the default behaviour of the submit event (data submission and page refresh)
+  // create an AJAX POST request that sends the form data to the server.
+  $('#new-tweet-form').on("submit", function(event) {
+    // stop the form from being submitted
+    event.preventDefault();
+      
+    // new tweet text
+    // The server is configured to receive form data formatted as a query string.
+    // The jQuery .serialize() function turns a set of form data into a query string.
+    // This serialized data should be sent to the server in the data field of the AJAX POST request.
+    const $tweet = $(this).children('textarea').serialize();
+  
+    // form validation for new tweet text
+    $('#error').empty();
+    const counter = Number($(this).children('div').children('output').val());
+    if (counter < 0) {
+      const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet content is too long! <i class='fas fa-exclamation-triangle'></i></p>";
+      return $('#error').append(message);
+    } else if (counter === 140) {
+      const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet does not have any characters!<i class='fas fa-exclamation-triangle'></i></p>";
+      return $('#error').append(message);
+    }
+      
+    // Create AJAX request - for new tweet
+    $.ajax({
+      method: 'POST',
+      url: 'http://localhost:8080/tweets',
+      data: $tweet
+    })
+      .done(function() {
+        // clear out counter and text area on submission
+        $('#new-tweet-form').children('textarea').val('');
+        $('#new-tweet-form').children('div').children('output').val('140');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
       
   renderTweets(data);
 
