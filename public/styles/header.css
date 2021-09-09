@@ -21,3 +21,13 @@
     margin: auto;
   }
   
+  /* Responsive design for desktop screen sizes as a minimum. */
+  @media only screen and (min-width: 1024px) {
+    .header {
+      height: 20em;
+      width: 25em;
+      margin: 8em;
+      margin-left: 2em;
+      margin-right: 2em;
+    }
+  }
