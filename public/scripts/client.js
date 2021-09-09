@@ -106,12 +106,37 @@ $(document).ready(function() {
         // clear out counter and text area on submission
         $('#new-tweet-form').children('textarea').val('');
         $('#new-tweet-form').children('div').children('output').val('140');
+
+        // loadTweets function makes the AJAX get request
+        // and then delegates the work to renderTweets function
+        loadTweets();
+
       })
       .catch((err) => {
         console.log(err);
       });
   });
-      
-  renderTweets(data);
+
+  // responsible for fetching tweets from the http://localhost:8080/tweets page.
+  // The loadtweets function will use jQuery to make a request to /tweets
+  // and receive the array of tweets as JSON.
+  loadTweets = function() {
+    // make request to /tweets and receive array of tweets as JSON
+    $.ajax({
+      method: 'GET',
+      url: 'http://localhost:8080/tweets'
+    })
+      // on successful, call the renderTWeets function passing the response
+      .then((result) => {
+        renderTweets(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  
+  // loadTweets function makes the AJAX get request
+  // and then delegates the work to renderTweets function
+  loadTweets();
 
 });
