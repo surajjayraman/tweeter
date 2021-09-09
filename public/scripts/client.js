@@ -5,6 +5,8 @@
  */
 
 $(document).ready(function() {
+  // Page URL
+  const pageURL = "http://localhost:8080/tweets";
 
   // Cross-Site Scripting Prevention
   // Preventing XSS with Escaping
@@ -80,7 +82,7 @@ $(document).ready(function() {
     // Create AJAX request - for new tweet
     $.ajax({
       method: 'POST',
-      url: 'http://localhost:8080/tweets',
+      url: pageURL,
       data: $tweet
     })
       .done(function() {
@@ -105,7 +107,7 @@ $(document).ready(function() {
     // make request to /tweets and receive array of tweets as JSON
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:8080/tweets'
+      url: pageURL
     })
       // on successful, call the renderTWeets function passing the response
       .then((result) => {
