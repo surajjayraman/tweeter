@@ -57,6 +57,10 @@
   .fa-angle-double-down {
     color: #FF0000;
   }
+  .fa-angle-double-down:hover {
+    color: orange;
+    padding-top: 0.5em;
+  }
   /* Manage hover state for social icons: change colour when user hovers on icon */
   .fa-flag:hover {
     color: orange;

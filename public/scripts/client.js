@@ -19,10 +19,10 @@ $(document).ready(function() {
   // toggle new tweet button on nav
   // Makes the form slide up or down when the (new) "Compose" button,
   // in the navigation, is clicked:
-  /*$('.newtweet-group').on('click', function() {
+  $('.newtweet-group').on('click', function() {
     $('.new-tweet').slideToggle('slow');
     $('#new-tweet-form').children('textarea').focus();
-  });*/
+  });
     
   // Tweet management: show a list of tweets //
   const renderTweets = function(tweets) {
@@ -39,6 +39,9 @@ $(document).ready(function() {
       // takes return value and appends it to the tweets container in order of newest first
       $('#tweets-container').prepend($tweet);
     }
+    // form should enable the textarea automatically 
+    // so that the user can begin typing right after clicking the new-tweet button.
+    $('#new-tweet-form').children('textarea').focus();
 
   };
 
