@@ -5,6 +5,14 @@
  */
 
 $(document).ready(function() {
+
+  // Cross-Site Scripting Prevention
+  // Preventing XSS with Escaping
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
     
   // Tweet management: show a list of tweets //
   const renderTweets = function(tweets) {
@@ -35,7 +43,7 @@ $(document).ready(function() {
             <h3 class="userID">${tweetObj.user.handle}</h3>
             </div>
             </header>
-            <p>${tweetObj.content.text}</p>
+            <p>${escape(tweetObj.content.text)}</p>
             <footer>
             <div>${time}</div>
             <div class="icons"><i class="fas fa-flag"></i>  <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div>
