@@ -15,6 +15,14 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+
+  // toggle new tweet button on nav
+  // Makes the form slide up or down when the (new) "Compose" button,
+  // in the navigation, is clicked:
+  /*$('.newtweet-group').on('click', function() {
+    $('.new-tweet').slideToggle('slow');
+    $('#new-tweet-form').children('textarea').focus();
+  });*/
     
   // Tweet management: show a list of tweets //
   const renderTweets = function(tweets) {

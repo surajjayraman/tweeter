@@ -1,3 +1,4 @@
+/* styling for navigation bar */
 nav {
     display: flex;
     align-items: center;
@@ -29,7 +30,7 @@ nav {
     margin-bottom: 0;
     font-size: 1.5rem;
   }
-  
+  /* applies to toggle new tweet button on nav */
   .arrow {
     display:flex;
     align-items: center;

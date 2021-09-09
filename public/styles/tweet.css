@@ -53,7 +53,10 @@
     padding-left: 0.5em;   
     color: #4056A1; 
   }
-
+  /* applies to toggle new tweet button on nav */
+  .fa-angle-double-down {
+    color: #FF0000;
+  }
   /* Manage hover state for social icons: change colour when user hovers on icon */
   .fa-flag:hover {
     color: orange;
