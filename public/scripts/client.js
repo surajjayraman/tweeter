@@ -39,7 +39,7 @@ $(document).ready(function() {
       // takes return value and appends it to the tweets container in order of newest first
       $('#tweets-container').prepend($tweet);
     }
-    // form should enable the textarea automatically 
+    // form should enable the textarea automatically
     // so that the user can begin typing right after clicking the new-tweet button.
     $('#new-tweet-form').children('textarea').focus();
 

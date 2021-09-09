@@ -67,4 +67,10 @@
     color: #F00;
   }
   
-  
+  /* Desktop version */
+  /* Responsive design for desktop screen sizes as a minimum. */
+  @media only screen and (min-width: 1024px) {
+    .new-tweet {
+      margin-top: 4em;
+    }
+  }
