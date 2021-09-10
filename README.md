@@ -2,6 +2,10 @@
 
 A simple single-page AJAX-based Twitter clone that uses jQuery, HTML5 and plain ol' CSS3 to help web bootcamp students get comfortable with our front-end chops with those technologies.
 
+## Screenshots
+!["Screenshot of tweeter desktop version"](https://github.com/surajjayraman/tweeter/blob/master/docs/tweeter-desktop.png?raw=true)
+!["Screenshot of tweeter mobile/tablet version"](https://github.com/surajjayraman/tweeter/blob/master/docs/tweeter-mobile.png?raw=true)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
